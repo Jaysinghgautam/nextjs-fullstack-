@@ -8,6 +8,10 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "rules": {
+  "@typescript-eslint/no-explicit-any": "off"
+},
+
   "dependencies": {
     "axios": "^1.11.0",
     "bcryptjs": "^3.0.2",
