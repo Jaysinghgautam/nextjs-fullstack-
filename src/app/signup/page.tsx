@@ -1,4 +1,4 @@
- "use client";
+"use client";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import {useRouter} from "next/navigation";
@@ -49,7 +49,7 @@ export default function SignupPage() {
         <hr />
         <label htmlFor="username">username</label>
         <input 
-        className="p-2 border bg-amber-100 border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+        className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
             id="username"
             type="text"
             value={user.username}
@@ -58,7 +58,7 @@ export default function SignupPage() {
             />
         <label htmlFor="email">email</label>
         <input 
-        className="p-2 border bg-amber-50 border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+        className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
             id="email"
             type="text"
             value={user.email}
@@ -67,7 +67,7 @@ export default function SignupPage() {
             />
         <label htmlFor="password">password</label>
         <input 
-        className="p-2 border bg-amber-50 border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
+        className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
             id="password"
             type="password"
             value={user.password}

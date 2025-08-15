@@ -1,12 +1,13 @@
-"use client"
+"use client";
 import axios from "axios";
-import Link from "next/link"
-import { useRouter } from "next/navigation";
-import {toast} from "react-hot-toast"
-import { useState } from "react";
+import Link from "next/link";
+import React, {useState} from "react";
+import {toast} from "react-hot-toast";
+import {useRouter} from "next/navigation";
 
-export default function () {
-     const router = useRouter()
+
+export default function ProfilePage() {
+    const router = useRouter()
     const [data, setData] = useState("nothing")
     const logout = async () => {
         try {
@@ -19,7 +20,6 @@ export default function () {
         }
     }
 
-    
     const getUserDetails = async () => {
         const res = await axios.get('/api/users/me')
         console.log(res.data);
