@@ -2,6 +2,7 @@
  import User from "@/models/userModel";
  import { NextRequest,NextResponse } from "next/server";
  import bcryptjs from "bcryptjs";
+import { sendEmail } from "@/helpers/mailer";
 
 
  connect()
@@ -12,7 +13,7 @@
         const reqBody = await request.json()
         const {username, email, password} = reqBody
 
-        // console.log(reqBody);
+         console.log(reqBody);
 
         //check if user already exists
        const user = await User.findOne({email});
@@ -33,6 +34,11 @@
 
      const saveUser = await newUser.save()
       console.log(saveUser)
+
+      //send verification email
+
+      await sendEmail({email, emailType: "VERIFY",
+        userId: saveUser._id})
 
       return NextResponse.json({
         message: "User created successfully",
